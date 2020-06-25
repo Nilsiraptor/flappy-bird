@@ -19,10 +19,7 @@ function frame() {
 
   screen.clearRect(0, 0, canvas.width, canvas.height)
 
-  screen.fillStyle = "rgb(255,0,0)"
-  screen.beginPath()
-  screen.arc(fb.x0, fb.y0, 50, 0, 360)
-  screen.fill()
+  fb.draw(screen)
 
   window.requestAnimationFrame(frame)
 }
