@@ -9,7 +9,13 @@ class Bird {
   draw(screen) {
     screen.fillStyle = "rgb(255,0,0)"
     screen.beginPath()
-    screen.arc(fb.x0, fb.y0, 50, 0, 360)
+    screen.arc(this.x0, this.y0, 50, 0, 360)
     screen.fill()
+  }
+
+  update(dt) {
+    let newY = 2*this.y0 - this.y1 + dt**2*9.81*300
+    this.y1 = this.y0
+    this.y0 = newY
   }
 }

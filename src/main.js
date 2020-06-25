@@ -13,9 +13,7 @@ function frame() {
   let dt = (t1 - t0)/1000
   t0 = t1
 
-  let newY = 2*fb.y0 - fb.y1 + dt**2*9.81*300
-  fb.y1 = fb.y0
-  fb.y0 = newY
+  fb.update(dt)
 
   screen.clearRect(0, 0, canvas.width, canvas.height)
 
