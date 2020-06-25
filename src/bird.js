@@ -18,4 +18,8 @@ class Bird {
     this.y1 = this.y0
     this.y0 = newY
   }
+
+  flap(dt) {
+    this.y1 = this.y0 + dt*1000
+  }
 }
