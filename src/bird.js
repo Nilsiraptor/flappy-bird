@@ -14,7 +14,7 @@ class Bird {
   }
 
   update(dt) {
-    let newY = 2*this.y0 - this.y1 + dt**2*9.81*300
+    let newY = 2*this.y0 - this.y1 + dt**2*9.81*400
     this.y1 = this.y0
     this.y0 = newY
   }
